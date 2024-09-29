@@ -9,9 +9,7 @@ interface Product {
   name: string;
   price: number;
   originalPrice: number;
-  discount: number;
   description: string;
-  rating?: number;
   image?: string;
 }
 
@@ -57,12 +55,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
             <span className="text-2xl font-bold text-green-400">₹{product.price}</span>
             <span className="text-sm text-gray-400 line-through ml-2">₹{product.originalPrice}</span>
           </div>
-          {product.rating !== undefined && (
+          {/* {product.rating !== undefined && (
             <div className="flex items-center">
               <Star className="w-4 h-4 text-yellow-400 mr-1" />
               <span className="text-sm">{product.rating.toFixed(1)}</span>
             </div>
-          )}
+          )} */}
         </div>
         <p className="text-gray-300 text-sm mb-4 line-clamp-2">{product.description}</p>
         <motion.button 

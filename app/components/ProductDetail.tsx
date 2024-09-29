@@ -9,10 +9,7 @@ interface Product {
   name: string;
   price: number;
   originalPrice: number;
-  discount: number;
   description: string;
-  rating: number;
-  reviews: number;
   image?: string;
 }
 
@@ -127,12 +124,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose, onAddTo
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <div className="flex items-center mr-4">
+              {/* <div className="flex items-center mr-4">
                 {[...Array(5)].map((_, i) => (
                   <FaStar key={i} className={i < product.rating ? "text-yellow-400" : "text-gray-300"} size={16} />
                 ))}
-              </div>
-              <span className="text-sm text-gray-600">({product.reviews} reviews)</span>
+              </div> */}
             </motion.div>
             <motion.div 
               className="flex items-center flex-wrap mb-3 sm:mb-6"
