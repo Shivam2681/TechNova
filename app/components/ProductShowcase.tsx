@@ -6,6 +6,19 @@ import ProductDetail from './ProductDetail';
 import Image from 'next/image';
 import { ArrowUpCircle, Tag } from 'lucide-react';
 
+interface Product {
+  id: number;
+  images: string[];
+  name: string;
+  price: number;
+  originalPrice: number;
+  discount: number;
+  description: string;
+  rating: number;
+  reviews: number;
+  image?: string;
+}
+
 interface ProductShowcaseProps {
   products: Product[];
   onAddToCart: (product: Product) => void;
