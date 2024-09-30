@@ -5,7 +5,7 @@ import ProductShowcase from './components/ProductShowcase';
 import { ShoppingCart, Search, Menu, ArrowDown, Star, Zap, Gift, TrendingUp, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface Product {
+export interface Product {
   id: number;
   name: string;
   price: number;

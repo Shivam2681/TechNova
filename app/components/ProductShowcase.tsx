@@ -5,16 +5,7 @@ import ProductCard from './ProductCard';
 import ProductDetail from './ProductDetail';
 import Image from 'next/image';
 import { ArrowUpCircle, Tag } from 'lucide-react';
-
-interface Product {
-  id: number;
-  images: string[];
-  name: string;
-  price: number;
-  originalPrice: number;
-  description: string;
-  image?: string;
-}
+import { Product } from '../page';
 
 interface ProductShowcaseProps {
   products: Product[];
@@ -157,3 +148,4 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products, onAddToCart
 };
 
 export default ProductShowcase;
+
