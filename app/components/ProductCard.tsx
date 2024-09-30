@@ -69,7 +69,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
           whileTap={{ scale: 0.95 }}
         >
           <ShoppingCart className="w-5 h-5 mr-2" />
-          Add to Cart
+          View Details
         </motion.button>
       </div>
     </motion.div>

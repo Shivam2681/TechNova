@@ -211,9 +211,18 @@ const Home: React.FC = () => {
             <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] opacity-10"></div>
           </div>
           <div className="relative z-10">
-            <h2 className="text-white text-6xl font-extrabold mb-4">
+            <motion.h2 
+              className="text-white text-6xl font-extrabold mb-4"
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              }}
+            >
               Welcome to <span className={`bg-clip-text text-transparent ${darkMode ? 'bg-gradient-to-r from-blue-400 to-purple-400' : 'bg-gradient-to-r from-pink-500 to-violet-500'}`}>TechNova</span>
-            </h2>
+            </motion.h2>
             <p className="text-gray-300 text-xl mb-10 max-w-2xl mx-auto">
               Discover cutting-edge technology that will transform your digital lifestyle.
             </p>
@@ -319,14 +328,14 @@ const Home: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Why Choose TechNova */}
+        {/* Why TechNova Stands Out? */}
         <motion.div 
           className="text-center mb-20"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h3 className="text-white text-3xl font-bold mb-6">Why Choose TechNova?</h3>
+          <h3 className="text-white text-3xl font-bold mb-6">Why TechNova Stands Out?</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-8">
             {[
               { icon: Star, title: "Top Quality", description: "We offer only the best products from trusted brands." },

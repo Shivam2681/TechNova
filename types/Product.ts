@@ -1,4 +1,3 @@
-// types/Product.ts
 export interface Product {
     id: number;
     images: string[];
@@ -6,6 +5,6 @@ export interface Product {
     price: number;
     originalPrice: number;
     description: string;
-    image?: string; // Optional property
-  }
+    image?: string; 
+}
   
